@@ -1,9 +1,8 @@
 class Game {
-  
 
-  getRandomPhrase() {
-    var randomPhrase = this.phrases[Math.floor(Math.random()*this.phrases.length)]; /* Selects random phrase from the phrases array.*/
-    return (randomPhrase); /* Returns the randomly selected phrase object. */
+  getRandomPhrase(array) {
+    var randomPhrase = array[Math.floor(Math.random()*array.length)]; /* Selects random phrase from the phrases array.*/
+    return randomPhrase.split('').toUpperCase(); /* Returns the randomly selected phrase object. */
   }
 
   handleInteraction() {
