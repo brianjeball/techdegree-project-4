@@ -1,7 +1,12 @@
 class Phrase {
   //The class should include a constructor that accepts a phrase as an argument. The class should include the following methods:
-  constructor(){
-    this.phrase = "";
+  constructor() {
+    this.missed = 0;
+    this.phrases = [
+      'hello',
+      'golden',
+      'panthers'
+    ];
   }
 
 /** addPhraseToDisplay(): this adds letter placeholders to the display when the game starts.
