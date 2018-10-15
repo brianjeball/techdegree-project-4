@@ -1,12 +1,7 @@
 class Phrase {
   //The class should include a constructor that accepts a phrase as an argument.
-  constructor() {
-    let missed = 0;
-    const phrases = [
-      'hello',
-      'golden',
-      'panthers'
-    ];
+  constructor(phrase) {
+    this.phrase = phrase;
   };
 
 /** addPhraseToDisplay(): this adds letter placeholders to the display when the game starts.
@@ -18,23 +13,12 @@ Make sure the phrase displayed on the screen doesn't include spaces.
 */
 
   addPhraseToDisplay(array) {
-    for (let i = 0; array.length ;i++) {
-      const liItem = document.createElement('li');
-      // liItem.addClass('letter')
-        // document.getElementById('phrase').append(pHold);
-        if(array[i]) == " ") {
-          liItem.className = "space"
-        } else {
-          liItem.className = "letter"
-        }
-    }
+    
   }
 
 // checkLetter(): checks to see if letter selected by player matches a letter in the phrase.
-  checkLetter() {
-    if(==) {
+  checkLetter(buttonClicked) {
 
-    }
   }
 
 // showMatchedLetter(): reveals the letter(s) on the board that matches player's selection.
