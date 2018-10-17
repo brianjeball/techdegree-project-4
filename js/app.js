@@ -1,22 +1,24 @@
 // ******** CONSTANTS
-
-const game = new Game(0, phrases);
-const phrase = [
+// let currentGame;
+// let currentPhrase;
+var game = new Game(0, phrases);
+const phrases = [
   'Dark Knight',
   'Scott Pilgrim',
   'Kung Fu Kenny',
   'Redemption',
   ];
+//const newGame = new Game(0, phrases);
 
 
 //resetDisplay(): this function hides the start screen overlay.
 function resetDisplay() {
-  return $('#btn__reset').on('click', function(){$('#overlay').hide()});
+  $('#overlay').remove();
 }
 
 //markButton(): this function is called when a player selects a letter. It disables the button on the onscreen keyboard and calls the handleInteraction() method of the Game class.
 function markButton() {
-
+  $().attr('disabled', 'disabled')
 }
 
 
@@ -33,15 +35,7 @@ window.addEventListener('click', (e) => {
 /**
  * Listens for click
  */
-window.addEventListener('click', (e) => {
-  if (e.target == $('#btn__reset')){
-    game.startGame();
-    resetDisplay();
-  }
+$('#btn__reset').on('click', () => {
+  resetDisplay();
+  game.startGame();
 });
-
-// document.getElementById('btn__reset').on('click', function(){
-//     console.log('btn__reset Clicked');
-//     resetDisplay();
-//     //game.startGame();
-// });

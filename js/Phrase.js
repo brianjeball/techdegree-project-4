@@ -12,17 +12,37 @@ When the player correctly guesses a letter,
 Make sure the phrase displayed on the screen doesn't include spaces.
 */
 
-  addPhraseToDisplay(array) {
-    
+  addPhraseToDisplay() {
+    // const li = document.createElement('<li>')
+    const li = "<li class='hide'></li>"
+    const phraseList = $('#phrase ul');
+    for (let i = 0; this.phrase.length; i++) {
+      phrase.append(li);
+      li.textContent = array[i]
+
+      if(this.phrase[i] = " ") {
+        li.addClass = "space"
+      } else {
+        li.addClass = "letter"
+      }
+    }
   }
 
 // checkLetter(): checks to see if letter selected by player matches a letter in the phrase.
-  checkLetter(buttonClicked) {
+  checkLetter() {
+    $('#qwerty button').on('click', () => {
+      for (let i = 0; i < letter.length; i++) {
+        if ($(this).text() === letter[i].innerHTML){
 
+        }
+      }
+
+    });
   }
 
 // showMatchedLetter(): reveals the letter(s) on the board that matches player's selection.
   showMatchedLetter() {
+    removeClass('hide').addClass('show')
 
   }
 
