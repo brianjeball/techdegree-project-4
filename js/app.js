@@ -41,5 +41,6 @@ window.addEventListener('click', (e) => {
 
 $('#btn__reset').on('click', () => {
   resetDisplay();
-  new Game(0, phrases).startGame();
+  // new Game(0, phrases).startGame();
+  game.startGame();
 });
