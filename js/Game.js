@@ -3,7 +3,7 @@ const phrase = new Phrase();
 class Game {
   constructor() {
      this.missed = 0;
-     this.phrases = ; // 
+     this.phrases = phrases; // array of Phrases in app.js
   }
 
   getRandomPhrase() {
