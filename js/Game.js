@@ -6,10 +6,13 @@ class Game {
      this.phrases = phrases; // array of Phrases in app.js
   }
 
+  /* Selects random phrase from the phrases array.*/
+  /* Returns the random phrase */
   getRandomPhrase() {
     // let pArray = this.phrases;
-    var randomPhrase = phrases[Math.floor(Math.random() * phrases.length)]; /* Selects random phrase from the phrases array.*/
-    return randomPhrase.toUpperCase().split(''); /* Returns the random phrase */
+    var randomPhrase = phrases[Math.floor(Math.random() * phrases.length)]; 
+    return randomPhrase.toUpperCase().split('');
+
   }
 
   handleInteraction(buttonClicked) { // check letter
@@ -22,21 +25,15 @@ class Game {
       phrase.showMatchedLetter();
       this.checkForWin();
     } else {
-      this.removeLife
+      this.removeLife();
     }
-    // for (let i = 0; i < pLetters.length; i++){
-    //     if (letterClicked === pLetters[i].textContent) {
-    //         pLetters[i].classList.add('show');
-    //         letterFound = true;
-    //     } else {
 
-    //     }
-    // }
-    // return letterFound ? letterClicked : null;
   }
 
 
-  // this method removes a life, removes a heart from the board, and, if the player is out of lives, ends the game.
+  /** this method removes a life, removes a heart from the board, 
+    * and, if the player is out of lives, ends the game.
+  **/
   removeLife() {
     this.missed += 1;
     $('.tries img').remove()

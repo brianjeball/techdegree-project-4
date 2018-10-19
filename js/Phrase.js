@@ -34,15 +34,7 @@ class Phrase {
       if (theLetter[i].textContent === clicked.toUpperCase()) {
         return found = true;
     }
-    
-    // $('#qwerty button').on('click', () => { // when any letter button is clicked
-    //   for (let i = 0; i < theLetter.length; i++) { // loop through the letters
-    //     if ($(this).text() === theLetter[i].innerHTML){ // check for a match
-    //       this.
-    //       this.showMatchedLetter();
-    //     }
-    //   }
-    // });
+
   }
 
 // showMatchedLetter(): reveals the letter(s) on the board that matches player's selection.
