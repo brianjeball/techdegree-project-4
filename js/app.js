@@ -43,3 +43,5 @@ $('#btn__reset').on('click', () => {
   // new Game(0, phrases).startGame();
   game.startGame();
 });
+
+console.log(game.getRandomPhrase());

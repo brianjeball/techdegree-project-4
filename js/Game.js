@@ -11,7 +11,7 @@ class Game {
   getRandomPhrase() {
     var randomPhrase = phrases[Math.floor(Math.random() * phrases.length)]; 
     return randomPhrase.toUpperCase().split('');
-
+    console.log(randomPhrase);
   }
 
   handleInteraction() { // check letter
@@ -69,8 +69,8 @@ class Game {
     // phrase.addPhraseToDisplay();
     // return phrase;
     this.missed = 0;
-    let randomPhrase = this.getRandomPhrase();
-    randomPhrase.addPhraseToDisplay(randomPhrase);
+    let gamePhrase = this.getRandomPhrase();
+    phrase.addPhraseToDisplay(gamePhrase);
     // new Phrase(randomPhrase).addPhraseToDisplay()
   }
 

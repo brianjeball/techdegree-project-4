@@ -9,7 +9,7 @@ class Phrase {
 
   addPhraseToDisplay() {
     // const li = document.createElement('<li>')
-    const phrase = this.phrase;
+    // const phrase = this.phrase;
     // const li = "<li class='hide'></li>";
     const li = document.createElement("li");
       li.classList.add("hide");
