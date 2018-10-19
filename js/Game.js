@@ -68,10 +68,10 @@ class Game {
     // var phrase = new Phrase(this.getRandomPhrase());
     // phrase.addPhraseToDisplay();
     // return phrase;
-    let randomPhrase = this.getRandomPhrase();
-    // randomPhrase.addPhraseToDisplay(randomPhrase);
     this.missed = 0;
-    new Phrase(randomPhrase).addPhraseToDisplay()
+    let randomPhrase = this.getRandomPhrase();
+    randomPhrase.addPhraseToDisplay(randomPhrase);
+    // new Phrase(randomPhrase).addPhraseToDisplay()
   }
 
 
