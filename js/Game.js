@@ -9,16 +9,15 @@ class Game {
   /* Selects random phrase from the phrases array.*/
   /* Returns the random phrase */
   getRandomPhrase() {
-    // let pArray = this.phrases;
     var randomPhrase = phrases[Math.floor(Math.random() * phrases.length)]; 
     return randomPhrase.toUpperCase().split('');
 
   }
 
-  handleInteraction(buttonClicked) { // check letter
-    const letterClicked = buttonClicked.textContent.toUpperCase();
-    let letterFound = false;
-    const pLetters = document.querySelectorAll('.letter')
+  handleInteraction() { // check letter
+    // const letterClicked = buttonClicked.textContent.toUpperCase();
+    // let letterFound = false;
+    // const pLetters = document.querySelectorAll('.letter')
     // const classLetter = $()
 
     if (phrase.checkLetter()) {
@@ -36,7 +35,7 @@ class Game {
   **/
   removeLife() {
     this.missed += 1;
-    $('.tries img').remove()
+    $('.tries').eq([this.missed]).remove();
   }
 
   // this method checks to see if the player has selected all of the letters.
