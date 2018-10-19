@@ -5,22 +5,20 @@ class Phrase {
   };
 
 /** addPhraseToDisplay(): this adds letter placeholders to the display when the game starts.
-Each letter is presented by an empty box, one list item for each letter.
-See the example_phrase_html.txt file for an example of what the render HTML for a phrase should look like when the game starts.
-When the player correctly guesses a letter,
-  the empty box is replaced with a the matched letter (see the showMatchedLetter() method below.
-Make sure the phrase displayed on the screen doesn't include spaces.
 */
 
   addPhraseToDisplay() {
     // const li = document.createElement('<li>')
-    const li = "<li class='hide'></li>"
+    const phrase = this.phrase;
+    // const li = "<li class='hide'></li>";
+    const li = document.createElement("li");
+      li.classList.add("hide");
     const phraseList = $('#phrase ul');
-    for (let i = 0; this.phrase.length; i++) {
-      phrase.append(li);
-      li.textContent = array[i]
+    for (let i = 0; phrase.length; i++) {
+      phraseList.append(li);
+      li.textContent = phrase[i]
 
-      if(this.phrase[i] = " ") {
+      if(phrase[i] = " ") {
         li.addClass = "space"
       } else {
         li.addClass = "letter"
@@ -29,21 +27,31 @@ Make sure the phrase displayed on the screen doesn't include spaces.
   }
 
 // checkLetter(): checks to see if letter selected by player matches a letter in the phrase.
-  checkLetter() {
-    $('#qwerty button').on('click', () => {
-      for (let i = 0; i < letter.length; i++) {
-        if ($(this).text() === letter[i].innerHTML){
-
-        }
-      }
-
-    });
+  checkLetter(clicked) {
+    const theLetter = $('#phrase .letter');
+    const found = false
+    for (let i = 0; theLetter.length; i++)
+      if (theLetter[i].textContent === clicked.toUpperCase()) {
+        return found = true;
+    }
+    
+    // $('#qwerty button').on('click', () => { // when any letter button is clicked
+    //   for (let i = 0; i < theLetter.length; i++) { // loop through the letters
+    //     if ($(this).text() === theLetter[i].innerHTML){ // check for a match
+    //       this.
+    //       this.showMatchedLetter();
+    //     }
+    //   }
+    // });
   }
 
 // showMatchedLetter(): reveals the letter(s) on the board that matches player's selection.
   showMatchedLetter() {
-    removeClass('hide').addClass('show')
-
+    // $('#phrase li').removeClass('hide').addClass('show');
+    document.querySelectorAll('.letter').forEach( letter => {
+      if (key === letter.textContent) { letter.classList.add('show');
+      }
+    });
   }
 
 }
