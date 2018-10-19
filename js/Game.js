@@ -1,8 +1,8 @@
 const phrase = new Phrase();
 
 class Game {
-  constructor() {
-     this.missed = 0;
+  constructor(missed, phrases) {
+     this.missed = missed;
      this.phrases = phrases; // array of Phrases in app.js
   }
 
@@ -71,7 +71,7 @@ class Game {
     // return phrase;
     let randomPhrase = this.getRandomPhrase();
     // randomPhrase.addPhraseToDisplay(randomPhrase);
-    this.missed = 0;s
+    this.missed = 0;
     new Phrase(randomPhrase).addPhraseToDisplay()
   }
 

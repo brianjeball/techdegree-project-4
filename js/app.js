@@ -1,5 +1,5 @@
 // ******** CONSTANTS
-var game = new Game(0, phrases);
+const game = new Game();
 
 const phrases = [
   'Dark Knight',
@@ -16,8 +16,7 @@ function resetDisplay() {
 //markButton(): this function is called when a player selects a letter. 
 //It disables the button on the onscreen keyboard and calls the handleInteraction() method of the Game class.
 function markButton() {
-  const hearts = document.querySelectorAll('#scoreboard .tries')
-  const heart = hearts[hearts.length-missed]
+  // const hearts = document.querySelectorAll('#scoreboard .tries')
   $(this).attr('disabled', 'disabled')
  
   $('#qwerty button').on('click', (evt) => {
