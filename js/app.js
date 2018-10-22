@@ -16,16 +16,15 @@ function resetDisplay() {
 //markButton(): this function is called when a player selects a letter. 
 //It disables the button on the onscreen keyboard and calls the handleInteraction() method of the Game class.
 function markButton() {
-  // const hearts = document.querySelectorAll('#scoreboard .tries')
   $('#qwerty button').on('click', (evt) => {
       evt.target.className = 'chosen';
       // $(this).attr('disabled', 'disabled')
-      return game.handleInteraction(evt.target);
+      game.handleInteraction(evt.target);
   });
 
 }
 
-//markButton();
+// markButton();
 
 //Add event listeners to each of the keyboard buttons, so that clicking a button calls the markButton() function.
 

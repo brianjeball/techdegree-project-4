@@ -8,7 +8,6 @@ class Phrase {
 */
 
   addPhraseToDisplay() {
-    
           const phraseList = document.querySelector('#phrase ul');
           const textPhrase = this.phrase;
           
@@ -23,13 +22,15 @@ class Phrase {
 
 // checkLetter(): checks to see if letter selected by player matches a letter in the phrase.
   checkLetter() {
+      // const clicked = $(this);
+      $('#qwerty button').on('click', () => {
       const theLetter = $('#phrase li .letter');
       const found = false
-      const clicked = $(this);
-      $('#qwerty button').on('click', () => {
       for (let i = 0; i < theLetter.length; i++)
-        if (clicked.text() === theLetter[i].innerHTML) {
+        if ($(this).text() === theLetter[i].innerHTML) {
           this.showMatchedLetter();
+          console.log('theLetter' + '' + theLetter);
+          console.log('this' + ' ' + $(this))
           return found = true;
         }
       });
