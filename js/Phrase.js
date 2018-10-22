@@ -8,32 +8,32 @@ class Phrase {
 */
 
   addPhraseToDisplay() {
-    // const li = document.createElement('<li>')
-    // const phrase = this.phrase;
-    // const li = "<li class='hide'></li>";
-    const li = document.createElement("li");
-      li.classList.add("hide");
-    const phraseList = $('#phrase ul');
-    for (let i = 0; phrase.length; i++) {
-      phraseList.append(li);
-      li.textContent = phrase[i]
-
-      if(phrase[i] = " ") {
-        li.addClass = "space"
-      } else {
-        li.addClass = "letter"
-      }
-    }
+    
+          const phraseList = document.querySelector('#phrase ul');
+          const textPhrase = this.phrase;
+          
+          textPhrase.forEach(phraseLetter => {
+            const li = document.createElement('li');
+            phraseList.appendChild(li);
+            li.setAttribute('class', 'hide');
+            li.textContent = phraseLetter;
+            return phraseLetter !== ' ' ? li.className = 'letter' : li.className = 'space';
+          });
   }
 
 // checkLetter(): checks to see if letter selected by player matches a letter in the phrase.
-  checkLetter(clicked) {
-    const theLetter = $('#phrase .letter');
-    const found = false
-    for (let i = 0; theLetter.length; i++)
-      if (theLetter[i].textContent === clicked.toUpperCase()) {
-        return found = true;
-    }
+  checkLetter() {
+      const theLetter = $('#phrase li .letter');
+      const found = false
+      const clicked = $(this);
+      $('#qwerty button').on('click', () => {
+      for (let i = 0; i < theLetter.length; i++)
+        if (clicked.text() === theLetter[i].innerHTML) {
+          return found = true;
+          this.showMatchedLetter();
+        }
+      });
+
 
   }
 
@@ -41,7 +41,9 @@ class Phrase {
   showMatchedLetter() {
     // $('#phrase li').removeClass('hide').addClass('show');
     document.querySelectorAll('.letter').forEach( letter => {
-      if (key === letter.textContent) { letter.classList.add('show');
+      if ($(this) === letter.textContent){ 
+        letter.classList.add('show');
+        letter.removeAttribute('class', 'hide')
       }
     });
   }

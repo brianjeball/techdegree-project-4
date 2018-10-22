@@ -25,8 +25,9 @@ function markButton() {
       game.handleInteraction(evt.target);
 });
 
-  // game.handleInteraction();
 }
+
+markButton();
 
 //Add event listeners to each of the keyboard buttons, so that clicking a button calls the markButton() function.
 

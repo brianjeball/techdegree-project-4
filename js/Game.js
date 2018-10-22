@@ -15,10 +15,6 @@ class Game {
   }
 
   handleInteraction() { // check letter
-    // const letterClicked = buttonClicked.textContent.toUpperCase();
-    // let letterFound = false;
-    // const pLetters = document.querySelectorAll('.letter')
-    // const classLetter = $()
 
     if (phrase.checkLetter()) {
       phrase.showMatchedLetter();
@@ -65,13 +61,10 @@ class Game {
   * adds that phrase to the board by calling the Phrase class' addPhraseToDisplay() method.
   */
   startGame() {
-    // var phrase = new Phrase(this.getRandomPhrase());
-    // phrase.addPhraseToDisplay();
-    // return phrase;
     this.missed = 0;
     let gamePhrase = this.getRandomPhrase();
-    phrase.addPhraseToDisplay(gamePhrase);
-    // new Phrase(randomPhrase).addPhraseToDisplay()
+    // phrase.addPhraseToDisplay(gamePhrase);
+    new Phrase(gamePhrase).addPhraseToDisplay()
   }
 
 
