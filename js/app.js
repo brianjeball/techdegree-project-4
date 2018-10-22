@@ -17,17 +17,15 @@ function resetDisplay() {
 //It disables the button on the onscreen keyboard and calls the handleInteraction() method of the Game class.
 function markButton() {
   // const hearts = document.querySelectorAll('#scoreboard .tries')
-  $(this).attr('disabled', 'disabled')
- 
   $('#qwerty button').on('click', (evt) => {
       evt.target.className = 'chosen';
-
-      game.handleInteraction(evt.target);
-});
+      // $(this).attr('disabled', 'disabled')
+      return game.handleInteraction(evt.target);
+  });
 
 }
 
-markButton();
+//markButton();
 
 //Add event listeners to each of the keyboard buttons, so that clicking a button calls the markButton() function.
 

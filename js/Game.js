@@ -15,12 +15,13 @@ class Game {
   }
 
   handleInteraction() { // check letter
-
     if (phrase.checkLetter()) {
       phrase.showMatchedLetter();
       this.checkForWin();
+      console.log('this entered the if')
     } else {
       this.removeLife();
+      console.log('this entered the else')
     }
 
   }

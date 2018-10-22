@@ -29,8 +29,8 @@ class Phrase {
       $('#qwerty button').on('click', () => {
       for (let i = 0; i < theLetter.length; i++)
         if (clicked.text() === theLetter[i].innerHTML) {
-          return found = true;
           this.showMatchedLetter();
+          return found = true;
         }
       });
 
