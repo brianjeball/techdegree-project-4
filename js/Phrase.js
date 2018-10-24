@@ -28,6 +28,7 @@ class Phrase {
         const theLetter = $('#phrase li');
         for (let i = 0; i < theLetter.length; i++) {
           if ($(this).text() === theLetter[i].innerHTML) {
+            theLetter[i].classList.add('match');
             this.showMatchedLetter();
             console.log('theLetter' + '' + theLetter);
             console.log('this' + ' ' + $(this))
@@ -41,13 +42,16 @@ class Phrase {
 
 // showMatchedLetter(): reveals the letter(s) on the board that matches player's selection.
   showMatchedLetter() {
-      // $('#phrase li').removeClass('hide').addClass('show');
-      document.querySelectorAll('.letter').forEach( letter => {
-        if ($(this) === letter.textContent){ 
-          letter.classList.add('show');
-          letter.removeAttribute('class', 'hide')
-        }
-      });
+      // // $('#phrase li').removeClass('hide').addClass('show');
+      // document.querySelectorAll('.letter').forEach( letter => {
+      //   if ($(this) === letter.textContent){ 
+      //     letter.classList.add('show');
+      //     letter.removeAttribute('class', 'hide')
+      //   }
+      // });
+
+      $('.match').className('show');
+
       
   }
 
