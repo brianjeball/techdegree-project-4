@@ -24,6 +24,11 @@ class Game {
       console.log('this entered the else')
     }
 
+    // this.phrases.checkLetter();
+    // $('#qwerty').on('click', () => {
+
+    // })
+
   }
 
 
