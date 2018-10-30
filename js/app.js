@@ -17,9 +17,10 @@ function resetDisplay() {
 //It disables the button on the onscreen keyboard and calls the handleInteraction() method of the Game class.
 function markButton() {
   $('#qwerty button').on('click', (evt) => {
-      evt.target.className = 'chosen';
-      // $(this).attr('disabled', 'disabled')
-      game.handleInteraction(evt.target);
+    evt.target.disabled = true;
+    evt.target.classList.add('chosen');
+    // $(this).attr('disabled', 'disabled')
+    // game.handleInteraction(evt.target);
   });
 
 }
@@ -31,6 +32,7 @@ function markButton() {
 window.addEventListener('click', (e) => {
   if (e.target.tagName ==='BUTTON') {
     markButton();
+    game.handleInteraction(e);
   }
 });
 

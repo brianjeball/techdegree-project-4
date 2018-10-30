@@ -14,20 +14,20 @@ class Game {
     console.log(randomPhrase);
   }
 
-  handleInteraction() { // check letter
-    if (phrase.checkLetter()) {
-      phrase.showMatchedLetter();
-      this.checkForWin();
-      console.log('this entered the if')
-    } else {
-      this.removeLife();
-      console.log('this entered the else')
-    }
+  handleInteraction(letter) { // check letter
+    // if (phrase.checkLetter(letter)) {
+    //   phrase.showMatchedLetter(letter);
+    //   this.checkForWin();
+    //   console.log('this entered the if')
+    // } else {
+    //   this.removeLife();
+    //   console.log('this entered the else')
+    // }
 
-    // this.phrases.checkLetter();
-    // $('#qwerty').on('click', () => {
-
-    // })
+    phrase.checkLetter(letter);
+    $('#qwerty button').on('click', () => {
+      phrase.showMatchedLetter(letter);
+    })
 
   }
 

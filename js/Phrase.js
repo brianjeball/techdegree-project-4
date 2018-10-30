@@ -21,38 +21,37 @@ class Phrase {
   }
 
 // checkLetter(): checks to see if letter selected by player matches a letter in the phrase.
-  checkLetter() {
+  checkLetter(letter) {
       //const clicked = $(this);
-        const found = false
-        $('#qwerty button').on('click', () => {
-        const theLetter = $('#phrase li');
+        const found = 0;
+        const theLetter = $('.letter');
         for (let i = 0; i < theLetter.length; i++) {
-          if ($(this).text() === theLetter[i].innerHTML) {
+          if (letter == theLetter[i].textContent) {
             theLetter[i].classList.add('match');
-            this.showMatchedLetter();
-            console.log('theLetter' + '' + theLetter);
-            console.log('this' + ' ' + $(this))
-            return found = true;
-          };
+            found += 1;
+          }
         }
-        });
-    
+        
+        if (found > 0) {
+          console.log("check letter true");
+          return true;
+        } else {
+          console.log("check letter false");
+          return false;
+        }    
 
   }
 
 // showMatchedLetter(): reveals the letter(s) on the board that matches player's selection.
-  showMatchedLetter() {
-      // // $('#phrase li').removeClass('hide').addClass('show');
-      // document.querySelectorAll('.letter').forEach( letter => {
-      //   if ($(this) === letter.textContent){ 
-      //     letter.classList.add('show');
-      //     letter.removeAttribute('class', 'hide')
-      //   }
-      // });
-
-      $('.match').className('show');
-
-      
+  showMatchedLetter(click) {
+      // $('#phrase li').removeClass('hide').addClass('show');
+      document.querySelectorAll('.letter').forEach( letter => {
+        if (click.textContent === letter.textContent){ 
+          letter.classList.add('show');
+          letter.classList.remove('hide');
+        }
+      });
+  
   }
 
 }
