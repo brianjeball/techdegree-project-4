@@ -4,6 +4,7 @@ class Game {
   constructor(missed, phrases) {
      this.missed = missed;
      this.phrases = phrases; // array of Phrases in app.js
+    //  this.phrase = this.startGame(phrases);
   }
 
   /* Selects random phrase from the phrases array.*/
