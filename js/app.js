@@ -22,13 +22,10 @@ function markButton() {
     // $(this).attr('disabled', 'disabled')
     // game.handleInteraction(evt.target);
   });
-
 }
 
 // markButton();
-
 //Add event listeners to each of the keyboard buttons, so that clicking a button calls the markButton() function.
-
 window.addEventListener('click', (e) => {
   if (e.target.tagName ==='BUTTON') {
     markButton();
@@ -37,11 +34,9 @@ window.addEventListener('click', (e) => {
 });
 
 //Add an event listener to the "Start Game" button which calls the resetDisplay() function, creates a new Game object, and starts the game.
-
 $('#btn__reset').on('click', () => {
   resetDisplay();
   // new Game(0, phrases).startGame();
   game.startGame();
 });
-
 console.log(game.getRandomPhrase());

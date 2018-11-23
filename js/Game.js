@@ -16,19 +16,19 @@ class Game {
   }
 
   handleInteraction(letter) { // check letter
-    // if (phrase.checkLetter(letter)) {
-    //   phrase.showMatchedLetter(letter);
-    //   this.checkForWin();
-    //   console.log('this entered the if')
-    // } else {
-    //   this.removeLife();
-    //   console.log('this entered the else')
-    // }
+    if (this.phrase.checkLetter(letter)) {
+      this.phrase.showMatchedLetter(letter);
+      this.checkForWin();
+      console.log('this entered the if')
+    } else {
+      this.removeLife();
+      console.log('this entered the else')
+    }
 
-    phrase.checkLetter(letter);
-    $('#qwerty button').on('click', () => {
-      phrase.showMatchedLetter(letter);
-    })
+    // this.phrase.checkLetter(letter);
+    // $('#qwerty button').on('click', () => {
+    //   phrase.showMatchedLetter(letter);
+    // })
 
   }
 
