@@ -60,7 +60,7 @@ class Phrase {
     //const matchLength = $('.match').length;
     //console.log(clicked);
     
-    phraseLi.each(function( index ) { // iterates over each letter in phrase
+    phraseLi.each(function() { // iterates over each letter in phrase
       //console.log($( this ));
       if ($(this).text() === clicked) { // if letter clicked matches with letter in phrase
         //console.log($(this));
