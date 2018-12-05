@@ -19,7 +19,7 @@ function markButton(evt) {
   // $('#qwerty button').on('click', (evt) => {
     evt.target.disabled = true; // letter disabled when clicked
     evt.target.classList.add('chosen'); // css changed when letter clicked
-    event.target.classList.add(event.target.textContent) // adds the letter as class
+    evt.target.classList.add(evt.target.textContent) // adds the letter as class
     //console.log(evt.target.textContent)      // logs the button letter
 
   // });
